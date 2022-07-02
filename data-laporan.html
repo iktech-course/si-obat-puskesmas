@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 2 | Data Tables</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Font -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition skin-red sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="index2.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>A</b>LT</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Admin</b>LTE</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">Alexander Pierce</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="active treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Beranda</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="data-bayi.html">
+            <i class="fa fa-map-o"></i> <span>Data obat masuk</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="data-ibu-hamil.html">
+            <i class="fa fa-map-o"></i> <span>Data obat keluar</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="data-vaksin.html">
+            <i class="fa fa-map-o"></i> <span>Stok obat</span>
+          </a>
+        </li>
+         <li class="treeview">
+          <a href="data-vaksin.html">
+            <i class="fa fa-map-o"></i> <span>Data obat</span>
+          </a>
+        </li>
+        <li class="treeview">
+            <a href="#">
+            <i class="fa fa-map-marker"></i> <span>Laporan</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-user-times"></i> <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Data laporan
+      </h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">
+               <TABLE>Tambahkan</TABLE>
+              </button>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example2" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Nama Bayi</th>
+                  <th>Jenis Kelamin</th>
+                  <th>Tanggal Lahir</th>
+                  <th>BB Lahir</th>
+                  <th>Nama Ortu</th>
+                  <th>Aksi</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>Apdal Gilang Aditya</td>
+                  <td>Laki-laki</td>
+                  <td>05-01-2017</td>
+                  <td>5000</td>
+                  <td>Sri Rahayu/Adi</td>
+                  <td>
+                     <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit">
+                      Edit
+                    </button>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-hapus">
+                      Hapus
+                    </button>
+                  </td>
+                </tr>
+                </tbody>
+                 </thead>
+                <tbody>
+                <tr>
+                  <td>Varisha Raihanah</td>
+                  <td>Perempuan</td>
+                  <td>05-02-2017</td>
+                  <td>3300</td>
+                  <td>Patimah/A.Somad</td>
+                  <td>
+                     <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit">
+                      Edit
+                    </button>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-hapus">
+                      Hapus
+                    </button>
+                  </td>
+                </tr>
+                 </thead>
+                <tbody>
+                <tr>
+                  <td>A.Rahil</td>
+                  <td>Laki-laki</td>
+                  <td>09-03-2017</td>
+                  <td>3500</td>
+                  <td>Royni/Rustam</td>
+                  <td>
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit">
+                      Edit
+                    </button>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-hapus">
+                      Hapus
+                    </button>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 1.0.0
+    </div>
+    <strong>Copyright &copy; 2021 <a href="https://adminlte.io">Elsi Yuni Dita</a>.</strong>
+  </footer>
+
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+ <div class="modal fade" id="modal-default">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Form Pendaftaran Bayi</h4>
+              </div>
+              <div class="modal-body">
+               <!-- form start -->
+            <form action="" method="post">
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nama Bayi</label>
+                  <input type="text" class="form-control" name="NamaBayi" placeholder="Enter Nama Bayi">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Jenis Kelamin</label>
+                  <input type="number" class="form-control" name="JenisKelamin" placeholder="Enter Jenis Kelamin">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Tanggal Lahir</label>
+                  <input type="number" class="form-control" name="TanggalLahir" placeholder="Enter Tanggal Lahir">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">BB Lahir</label>
+                  <input type="text" class="form-control" name="BBLahir" placeholder="Enter BB Lahir">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nama Orangtua</label>
+                  <input type="text" class="form-control" name="NamaOrangtua" placeholder="Enter Nama Orangtua">
+                </div>
+              </div>
+              <!-- /.box-body -->
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+<!-- jQuery 3 -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!-- page script -->
+<script>
+  $(function () {
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': true,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  });
+</script>
+</body>
+</html>
+ 
