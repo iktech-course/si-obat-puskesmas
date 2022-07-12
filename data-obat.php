@@ -67,29 +67,28 @@
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu" data-widget="tree">
+      <ul class="sidebar-menu" data-widget="">
         <li class="active treeview">
-          <a href="#">
+          <a href="beranda.php">
             <i class="fa fa-dashboard"></i> <span>Beranda</span>
           </a>
         </li>
         <li class="treeview">
-          <a href="data-bayi.html">
+          <a href="obat-masuk.php">
             <i class="fa fa-map-o"></i> <span>Data obat masuk</span>
           </a>
         </li>
         <li class="treeview">
-          <a href="data-ibu-hamil.html">
+          <a href="data-obat-keluar.php">
             <i class="fa fa-map-o"></i> <span>Data obat keluar</span>
           </a>
         </li>
         <li class="treeview">
-          <a href="data-vaksin.html">
+          <a href="stok-obat.html">
             <i class="fa fa-map-o"></i> <span>Stok obat</span>
-             </a>
-        </li>
-        <li class="treeview">
-          <a href="data-vaksin.html">
+          </a>
+          <li class="treeview">
+          <a href="data-obat.php">
             <i class="fa fa-map-o"></i> <span>Data obat</span>
           </a>
         </li>
