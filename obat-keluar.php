@@ -155,7 +155,7 @@
                     $no++
                     ?>
                   <td><?=$no ?></td>
-                  <td><?=$data['nama_obat'] ?></td>
+                  <td><?=$data['id_obat'] ?></td>
                   <td><?=$data['tgl_obat_keluar'] ?></td>
                   <td><?=$data['stok_keluar'] ?></td>
                   <td>
