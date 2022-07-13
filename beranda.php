@@ -5,7 +5,6 @@
   // $data = mysqli_fetch_array($query);
 
   ?>
-
 <!DOCTYPE html>
 <html>
 <head>

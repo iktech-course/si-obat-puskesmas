@@ -130,21 +130,30 @@
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example2" class="table table-bordered table-striped">
+                <?php
+                include 'koneksi.php';
+
+                $sql = "SELECT stok_obat.id, data_obat.nama, stok_obat.stok FROM stok_obat INNER JOIN data_obat ON stok_obat.id_obat = data_obat.id";
+                $query = mysqli_query($koneksi, $sql);
+                $no = 0;
+                ?>
                 <thead>
                 <tr>
                   <th>No</th>
                   <th>Nama Obat</th>
-                  <th>Stok Awal</th>
                   <th>Sisa Stok</th>
                   <th>Aksi</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                  <td>1</td>
-                  <td>Acyclovir Tab 400 mg</td>
-                  <td>650</td>
-                  <td>500</td>
+                  <?php
+                    while($data = mysqli_fetch_array($query)) {
+                    $no++;
+                  ?>
+                  <td><?= $no ?></td>
+                  <td><?= $data['nama'] ?></td>
+                  <td><?= $data['stok'] ?></td>
                   <td>
                      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit">
                       Edit
@@ -153,45 +162,11 @@
                       Hapus
                     </button>
                   </td>
+                  <?php
+                  }
+                  ?>
                 </tr>
                 </tbody>
-                 </thead>
-                 <tbody>
-                <tr>
-                  <td>2</td>
-                  <td>Amlodipin 10 mg</td>
-                  <td>900</td>
-                  <td>10</td>
-                  <td>
-                     <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit">
-                      Edit
-                    </button>
-                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-hapus">
-                      Hapus
-                    </button>
-                  </td>
-                </tr>
-                </tbody>
-                 </thead>
-                  <tbody>
-                <tr>
-                  <td>3</td>
-                  <td>Amoksisilin Sirup Kering 125 mg/5ml</td>
-                  <td>360</td>
-                  <td>250</td>
-                  <td>
-                     <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit">
-                      Edit
-                    </button>
-                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-hapus">
-                      Hapus
-                    </button>
-                  </td>
-                </tr>
-                </tbody>
-                 </thead>
-               
-                </tr>
               </table>
             </div>
             <!-- /.box-body -->
