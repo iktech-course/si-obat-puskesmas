@@ -79,7 +79,7 @@
           </a>
         </li>
         <li class="treeview">
-          <a href="data-obat-keluar.php">
+          <a href="obat-keluar.php">
             <i class="fa fa-map-o"></i> <span>Data obat keluar</span>
           </a>
         </li>

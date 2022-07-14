@@ -79,7 +79,7 @@
           </a>
         </li>
         <li class="treeview">
-          <a href="data-obat-keluar.php">
+          <a href="obat-keluar.php">
             <i class="fa fa-map-o"></i> <span>Data obat keluar</span>
           </a>
         </li>
@@ -120,7 +120,7 @@
                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">
                <TABLE>Tambahkan</TABLE>
               </button>
-              <a target="_blank" href="export-data-posyandu.php" class="btn btn-success mt-2 mb-3">Export Ke Excel</a>
+              <a target="_blank" href="export-data-obat.php" class="btn btn-success mt-2 mb-3">Export Ke Excel</a>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
