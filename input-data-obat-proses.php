@@ -17,6 +17,6 @@ if($query)
 else 
 {
 	echo "Data Gagal Disimpan";
-	// mysqli_eror ($query);
+	mysqli_error($koneksi);
 }
 ?>
