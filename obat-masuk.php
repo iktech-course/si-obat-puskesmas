@@ -67,9 +67,9 @@
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu" >
+      <ul class="sidebar-menu" data-widget="">
         <li class="active treeview">
-          <a href="#">
+          <a href="beranda.php">
             <i class="fa fa-dashboard"></i> <span>Beranda</span>
           </a>
         </li>
@@ -79,23 +79,17 @@
           </a>
         </li>
         <li class="treeview">
-          <a href="data-ibu-hamil.html">
+          <a href="data-obat-keluar.php">
             <i class="fa fa-map-o"></i> <span>Data obat keluar</span>
           </a>
         </li>
-         <li class="treeview">
-          <a href="data-vaksin.html">
+        <li class="treeview">
+          <a href="stok-obat.html">
             <i class="fa fa-map-o"></i> <span>Stok obat</span>
           </a>
-        </li>
-        <li class="treeview">
-          <a href="data-vaksin.html">
+          <li class="treeview">
+          <a href="data-obat.php">
             <i class="fa fa-map-o"></i> <span>Data obat</span>
-          </a>
-        </li>
-        <li class="treeview">
-            <a href="#">
-            <i class="fa fa-map-marker"></i> <span>Laporan</span>
           </a>
         </li>
         <li class="treeview">
@@ -126,6 +120,7 @@
                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">
                <TABLE>Tambahkan</TABLE>
               </button>
+              <a target="_blank" href="export-excel-obat-masuk.php" class="btn btn-success mt-2 mb-3">Export Ke Excel</a>
             </div>
 
                
@@ -247,7 +242,7 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">dit Obat Masuk</h4>
+                <h4 class="modal-title">Edit Obat Masuk</h4>
               </div>
               <div class="modal-body">
                <!-- form start -->

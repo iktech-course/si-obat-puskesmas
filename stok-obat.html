@@ -94,11 +94,6 @@
           </a>
         </li>
         <li class="treeview">
-            <a href="#">
-            <i class="fa fa-map-marker"></i> <span>Laporan</span>
-          </a>
-        </li>
-        <li class="treeview">
           <a href="#">
             <i class="fa fa-user-times"></i> <span>Logout</span>
           </a>
@@ -126,6 +121,7 @@
                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">
                <TABLE>Tambahkan</TABLE>
               </button>
+              <a target="_blank" href="export-data-posyandu.php" class="btn btn-success mt-2 mb-3">Export Ke Excel</a>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -133,9 +129,8 @@
                 <thead>
                 <tr>
                   <th>No</th>
-                  <th>Nama Obat</th>
-                  <th>Stok Awal</th>
-                  <th>Sisa Stok</th>
+                  <th>id obat</th>
+                  <th>Stok</th>
                   <th>Aksi</th>
                 </tr>
                 </thead>
@@ -144,7 +139,6 @@
                   <td>1</td>
                   <td>Acyclovir Tab 400 mg</td>
                   <td>650</td>
-                  <td>500</td>
                   <td>
                      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit">
                       Edit
@@ -161,7 +155,6 @@
                   <td>2</td>
                   <td>Amlodipin 10 mg</td>
                   <td>900</td>
-                  <td>10</td>
                   <td>
                      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit">
                       Edit
@@ -178,7 +171,6 @@
                   <td>3</td>
                   <td>Amoksisilin Sirup Kering 125 mg/5ml</td>
                   <td>360</td>
-                  <td>250</td>
                   <td>
                      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit">
                       Edit

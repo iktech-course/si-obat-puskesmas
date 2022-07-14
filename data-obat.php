@@ -93,11 +93,6 @@
           </a>
         </li>
         <li class="treeview">
-            <a href="#">
-            <i class="fa fa-map-marker"></i> <span>Laporan</span>
-          </a>
-        </li>
-        <li class="treeview">
           <a href="#">
             <i class="fa fa-user-times"></i> <span>Logout</span>
           </a>
@@ -125,6 +120,7 @@
                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">
                <TABLE>Tambahkan</TABLE>
               </button>
+              <a target="_blank" href="export-data-posyandu.php" class="btn btn-success mt-2 mb-3">Export Ke Excel</a>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
