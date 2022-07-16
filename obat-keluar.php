@@ -84,7 +84,7 @@
           </a>
         </li>
         <li class="treeview">
-          <a href="stok-obat.html">
+          <a href="stok-obat.php">
             <i class="fa fa-map-o"></i> <span>Stok obat</span>
           </a>
           <li class="treeview">
