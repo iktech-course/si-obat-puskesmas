@@ -1,8 +1,8 @@
 <?php
   include("koneksi.php");
 
-  // $query = mysqli_query($koneksi,"SELECT * FROM admin");
-  // $data = mysqli_fetch_array($query);
+   $query = mysqli_query($koneksi,"SELECT * FROM admin");
+   $data = mysqli_fetch_array($query);
 
   ?>
 <!DOCTYPE html>
@@ -69,7 +69,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="glyphicon glyphicon-user"></i>
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs">Nurrajma suryanti</span>
             </a>
           </li>
         </ul>
@@ -93,7 +93,7 @@
           </a>
         </li>
         <li class="treeview">
-          <a href="data-obat-keluar.php">
+          <a href="obat-keluar.php">
             <i class="fa fa-map-o"></i> <span>Data obat keluar</span>
           </a>
         </li>
@@ -104,11 +104,6 @@
           <li class="treeview">
           <a href="data-obat.php">
             <i class="fa fa-map-o"></i> <span>Data obat</span>
-          </a>
-        </li>
-        <li class="treeview">
-            <a href="#">
-            <i class="fa fa-map-marker"></i> <span>Laporan</span>
           </a>
         </li>
         <li class="treeview">
@@ -137,7 +132,7 @@
       <div class="row-lg-12">
         <div class="box box-info">
             <div class="box-body with-border">
-              <h1>Selamat Datang, <strong><?=$data['nama_lengkap']?></strong></h1>
+              <h1>Selamat Datang, <strong><? = $data ['nama_lengkap']?></strong></h1>
               <h3>Di Aplikasi Pengelolaan data obat</h3>
             </div>
             <!-- /.box-header -->
@@ -213,7 +208,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0.0
     </div>
-    <strong>Copyright &copy; 2021 <a href="https://adminlte.io">Elsi Yuni Dita</a>.</strong>
+    <strong>Copyright &copy; 2021 <a href="https://adminlte.io">Nurrajma suryanti</a>.</strong>
   </footer>
   </aside>
 

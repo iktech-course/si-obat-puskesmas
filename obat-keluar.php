@@ -67,35 +67,29 @@
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu" data-widget="tree">
+      <ul class="sidebar-menu" data-widget="">
         <li class="active treeview">
-          <a href="#">
+          <a href="beranda.php">
             <i class="fa fa-dashboard"></i> <span>Beranda</span>
           </a>
         </li>
         <li class="treeview">
-          <a href="data-bayi.html">
+          <a href="obat-masuk.php">
             <i class="fa fa-map-o"></i> <span>Data obat masuk</span>
           </a>
         </li>
         <li class="treeview">
-          <a href="data-ibu-hamil.html">
+          <a href="obat-keluar.php">
             <i class="fa fa-map-o"></i> <span>Data obat keluar</span>
           </a>
         </li>
         <li class="treeview">
-          <a href="data-vaksin.html">
+          <a href="stok-obat.html">
             <i class="fa fa-map-o"></i> <span>Stok obat</span>
           </a>
-        </li>
-        <li class="treeview">
-          <a href="data-vaksin.html">
+          <li class="treeview">
+          <a href="data-obat.php">
             <i class="fa fa-map-o"></i> <span>Data obat</span>
-          </a>
-        </li>
-        <li class="treeview">
-            <a href="#">
-            <i class="fa fa-map-marker"></i> <span>Laporan</span>
           </a>
         </li>
         <li class="treeview">
@@ -126,6 +120,7 @@
                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">
                <TABLE>Tambahkan</TABLE>
               </button>
+              <a target="_blank" href="export-obat-keluar.php" class="btn btn-success mt-2 mb-3">Export Ke Excel</a>
             </div>
 
             <!-- /.box-header -->
@@ -143,7 +138,6 @@
                 <tr>
                 <th>No</th>
                   <th>Tanggal Obat Keluar</th>
-                  <th>Nama Obat</th>
                   <th>Stok Keluar</th>
                   <th>Aksi</th>
                 </tr>
@@ -198,37 +192,33 @@
 </div>
 <!-- ./wrapper -->
 
- <div class="modal fade" id="modal-default">
+<div class="modal fade" id="modal-default">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Form Obat Keluar</h4>
+                <h4 class="modal-title">Tambah Obat Keluar</h4>
               </div>
               <div class="modal-body">
                <!-- form start -->
-            <form action="" method="post">
+            <form action="tambah-obat-masuk.php" method="post">
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputEmail1">N0</label>
-                  <input type="text" class="form-control" name="N0" placeholder="Enter N0">
+                  <input type="text" class="form-control" name="id" placeholder="Enter N0">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Tanggal Obat Keluar</label>
-                  <input type="number" class="form-control" name="JenisKelamin" placeholder="Enter Jenis Kelamin">
+                  <input type="date" class="form-control" name="tgl_obat_Keluar" placeholder="Enter Tanggal Obat Keluar">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Nama Obat</label>
-                  <input type="number" class="form-control" name="Nama Obat" placeholder="Enter Nama Obat">
+                  <label for="exampleInputEmail1">id Obat</label>
+                  <input type="number" class="form-control" name="id_obat" placeholder="Enter Nama Obat">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Jumlah</label>
-                  <input type="text" class="form-control" name="Jumlah" placeholder="Enter Jumlah">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Tanggal Ex</label>
-                  <input type="text" class="form-control" name="Tanggal Ex" placeholder="Enter Tanggal Ex">
+                  <label for="exampleInputEmail1">Stok keluar</label>
+                  <input type="text" class="form-control" name="stok_masuk" placeholder="Enter Jumlah stok">
                 </div>
               </div>
               <!-- /.box-body -->
