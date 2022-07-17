@@ -107,7 +107,7 @@
           </a>
         </li>
         <li class="treeview">
-          <a href="#">
+          <a href="logout.php">
             <i class="fa fa-user-times"></i> <span>Logout</span>
           </a>
         </li>
