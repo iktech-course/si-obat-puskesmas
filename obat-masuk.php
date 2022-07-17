@@ -84,7 +84,7 @@
           </a>
         </li>
         <li class="treeview">
-          <a href="stok-obat.html">
+          <a href="stok-obat.php">
             <i class="fa fa-map-o"></i> <span>Stok obat</span>
           </a>
           <li class="treeview">
@@ -130,15 +130,15 @@
                 <?php
                   include 'koneksi.php';
 
-                  $sql = "SELECT * FROM obat_masuk";
+                  $sql = "SELECT obat_masuk.id, obat_masuk.tgl_obat_masuk, data_obat.nama, obat_masuk.stok_masuk FROM obat_masuk INNER JOIN data_obat ON obat_masuk.id_obat = data_obat.id";
                   $query = mysqli_query($koneksi,$sql);
                   $no = 0
                   ?>
                 <thead>
                 <tr>
                   <th>No</th>
-                  <th>Id Obat</th>
                   <th>Tanggal Obat Masuk</th>
+                  <th>Nama Obat</th>
                   <th>Stok Masuk</th>
                   <th>Aksi</th>
                 </tr>
@@ -150,8 +150,8 @@
                     $no++
                     ?>
                   <td><?=$no ?></td>
-                  <td><?=$data['id_obat']?></td>
                   <td><?=$data['tgl_obat_masuk'] ?></td>
+                  <td><?=$data['nama'] ?></td>
                   <td><?=$data['stok_masuk'] ?></td>
                   <td>
                      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit">

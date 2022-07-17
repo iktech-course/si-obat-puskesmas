@@ -19,7 +19,7 @@ if($jumlah > 0)
 	$_SESSION['username'] = $data['username'];
 	$_SESSION['password'] = $data['password'];
 
-	header('lacation: beranda.php');
+	header('location: beranda.php');
 }
 else 
 {

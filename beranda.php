@@ -1,11 +1,10 @@
 <?php
   include("koneksi.php");
 
-   $query = mysqli_query($koneksi,"SELECT * FROM admin");
-   $data = mysqli_fetch_array($query);
+  //  $query = mysqli_query($koneksi,"SELECT * FROM admin");
+  //  $data = mysqli_fetch_array($query);
 
   ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -99,7 +98,7 @@
           </a>
         </li>
         <li class="treeview">
-          <a href="stok-obat.html">
+          <a href="stok-obat.php">
             <i class="fa fa-map-o"></i> <span>Stok obat</span>
           </a>
           <li class="treeview">
@@ -133,7 +132,7 @@
       <div class="row-lg-12">
         <div class="box box-info">
             <div class="box-body with-border">
-              <h1>Selamat Datang, <strong><? = $data ['nama_lengkap']?></strong></h1>
+              <!-- <h1>Selamat Datang, <strong><?php #$data ['nama_lengkap']?></strong></h1> -->
               <h3>Di Aplikasi Pengelolaan data obat</h3>
             </div>
             <!-- /.box-header -->
