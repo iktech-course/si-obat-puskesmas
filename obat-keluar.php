@@ -55,7 +55,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs">Nurrajma suryanti</span>
             </a>
           </li>
         </ul>
@@ -120,7 +120,7 @@
                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">
                <TABLE>Tambahkan</TABLE>
               </button>
-              <a target="_blank" href="export-obat-keluar.php" class="btn btn-success mt-2 mb-3">Export Ke Excel</a>
+              <a target="_blank" href="export-excel-obat-Keluar.php" class="btn btn-success mt-2 mb-3">Export Ke Excel</a>
             </div>
 
             <!-- /.box-header -->
@@ -128,7 +128,6 @@
               <table id="example2" class="table table-bordered table-striped">
                 <?php 
                   include 'koneksi.php';
-
                   $sql = "SELECT * FROM obat_keluar";
                   $query = mysqli_query($koneksi,$sql);
                   $no = 0
