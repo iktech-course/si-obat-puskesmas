@@ -10,7 +10,7 @@ $password = $_POST['password'];
 
 $query = mysqli_query($koneksi,"SELECT * FROM admin WHERE username = '$username' AND password = '$password'");
 $data = mysqli_fetch_array($query);
-$jumlah = mysqli_num_rows($quaery);
+$jumlah = mysqli_num_rows($query);
 
 
 //Jika Data Ditemukan Maka Proses Login Berhasil 

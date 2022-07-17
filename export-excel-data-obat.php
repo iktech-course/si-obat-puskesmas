@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
 <body>
     <?php
         header("Content-type: application/vnd-ms-excel");
-        header("Content-Disposition: attachment; filename=Data obat.xls");
+        header("Content-Disposition: attachment; filename=data obat.xls");
     ?>
 
     <table border="1">
@@ -17,7 +17,7 @@
             <tr>
                 <th>No</th>
                 <th>Nama</th>
-                <th>satuan</th>
+                <th>Satuan</th>
                 <th>tgl Expired</th>
             </tr>
         </thead>
