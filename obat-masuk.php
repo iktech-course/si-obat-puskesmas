@@ -164,58 +164,58 @@
                     </tr>
                   </tbody>
                   </thead>
-                </table>
-                <!-- Modal Edit Data -->
-                <div class="modal fade" id="modal-edit<?php echo $data['id'] ?>">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">Edit Data Obat Masuk</h4>
-                      </div>
-                      <div class="modal-body">
-                        <!-- form start -->
-                        <form action="edit-obat-masuk.php" method="post">
-                        <input type="hidden" name="id" value="<?= $data['id']; ?>">
-                          <div class="box-body">
-                            <div class="form-group">
-                              <label for="exampleInputEmail1">Nama Obat</label>
-                              <select class="form-control custom-select rounded-0" id="exampleSelectRounded0" name="nama_obat">
-                                <option value="">Pilih Nama Obat</option>
-                                <?php
-                                include("koneksi.php");
-                                $query_obat = mysqli_query($koneksi, "SELECT id, nama FROM data_obat");
-                                while ($res = mysqli_fetch_array($query_obat)) { ?>
-                                  <option value="<?= $res['id']?>" <?php if($res['id'] == $data['id_obat']) echo "selected" ?> ><?= $res['nama']?></option>
-                                <?php } ?>
-                              </select>
+                  <!-- Modal Edit Data -->
+                  <div class="modal fade" id="modal-edit<?php echo $data['id'] ?>">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                          <h4 class="modal-title">Edit Data Obat Masuk</h4>
+                        </div>
+                        <div class="modal-body">
+                          <!-- form start -->
+                          <form action="edit-obat-masuk.php" method="post">
+                            <input type="hidden" name="id" value="<?= $data['id']; ?>">
+                            <div class="box-body">
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">Nama Obat</label>
+                                <select class="form-control custom-select rounded-0" id="exampleSelectRounded0" name="nama_obat">
+                                  <option value="">Pilih Nama Obat</option>
+                                  <?php
+                                  include("koneksi.php");
+                                  $query_obat = mysqli_query($koneksi, "SELECT id, nama FROM data_obat");
+                                  while ($res = mysqli_fetch_array($query_obat)) { ?>
+                                    <option value="<?= $res['id'] ?>" <?php if ($res['id'] == $data['id_obat']) echo "selected" ?>><?= $res['nama'] ?></option>
+                                  <?php } ?>
+                                </select>
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">Tanggal Obat Masuk</label>
+                                <input type="date" class="form-control" name="tgl_obat_masuk" placeholder="Enter Tanggal Obat Masuk" value="<?= $data['tgl_obat_masuk'] ?>">
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">Stok Masuk</label>
+                                <input type="text" class="form-control" name="stok_masuk" placeholder="Enter Jumlah stok" value="<?= $data['stok_masuk'] ?>">
+                              </div>
                             </div>
-                            <div class="form-group">
-                              <label for="exampleInputEmail1">Tanggal Obat Masuk</label>
-                              <input type="date" class="form-control" name="tgl_obat_masuk" placeholder="Enter Tanggal Obat Masuk" value="<?= $data['tgl_obat_masuk'] ?>">
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleInputEmail1">Stok Masuk</label>
-                              <input type="text" class="form-control" name="stok_masuk" placeholder="Enter Jumlah stok" value="<?= $data['stok_masuk'] ?>">
-                            </div>
-                          </div>
-                          <!-- /.box-body -->
+                            <!-- /.box-body -->
 
-                          <div class="box-footer">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                          </div>
-                        </form>
+                            <div class="box-footer">
+                              <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                          </form>
+                        </div>
                       </div>
+                      <!-- /.modal-content -->
                     </div>
-                    <!-- /.modal-content -->
+                    <!-- /.modal-dialog -->
                   </div>
-                  <!-- /.modal-dialog -->
-                </div>
-                <!-- /.modal -->
-              <?php
-                }
-              ?>
+                  <!-- /.modal -->
+                <?php
+                      }
+                ?>
+                </table>
               </div>
               <!-- /.box-body -->
             </div>

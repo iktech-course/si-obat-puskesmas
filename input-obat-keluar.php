@@ -1,6 +1,6 @@
 <?php
 include('koneksi.php');
-// Input Data Ke Tabel obat_masuk
+// Input Data Ke Tabel obat_keluar
 $id_obat = $_POST['nama_obat'];
 $tgl_obat_masuk = $_POST['tgl_obat_keluar'];
 $stok_keluar = $_POST['stok_keluar'];
