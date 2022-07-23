@@ -20,8 +20,7 @@ $data_stok_keluar = $data_obat_keluar['stok_keluar'];
 
 
 $sisa_obat;
-// Logika Edit Data Obat Keluar
-// 1. Jika Input stok_keluar lebih besar dari data_stok_keluar, maka stok_keluar ditambah dan stok_obat dikurangi
+
 if($stok_keluar > $data_stok_keluar)
 {
     $sisa_obat = $stok_obat - ($stok_keluar - $data_stok_keluar);

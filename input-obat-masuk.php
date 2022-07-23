@@ -12,6 +12,8 @@ $query_stok = mysqli_query($koneksi, $sql_stok);
 $data_stok = mysqli_fetch_array($query_stok);
 $stok_obat = $data_stok['stok'];
 
+
+
 $sisa_obat = $stok_obat + $stok_masuk;
 
 $sql_input = "INSERT INTO obat_masuk (id_obat, tgl_obat_masuk, stok_masuk) VALUES ('$id_obat', '$tgl_obat_masuk', '$stok_masuk')";
