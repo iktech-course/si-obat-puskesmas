@@ -144,7 +144,7 @@
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3>11</h3>
+              <h3>10</h3>
 
               <p>Data obat masuk</p>
             </div>
@@ -159,7 +159,7 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>1234</h3>
+              <h3>10</h3>
 
               <p>Data obat keluar</p>
             </div>
@@ -174,7 +174,7 @@
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>4</h3>
+              <h3>10</h3>
 
                <p>Data obat</p>
             </div>
@@ -189,7 +189,7 @@
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>4</h3>
+              <h3>10</h3>
 
               <p>Stok obat</p>
             </div>
