@@ -164,9 +164,7 @@
                     </tr>
                   </tbody>
                   </thead>
-                </table>
-              </div>
-              <!-- /.box-body -->
+                                <!-- /.box-body -->
               <!-- Modal Edit Data -->
               <div class="modal fade" id="modal-edit<?php echo $data['id'] ?>">
                 <div class="modal-dialog">
@@ -218,6 +216,8 @@
             <?php
                       }
             ?>
+                </table>
+              </div>
             </div>
             <!-- /.box -->
           </div>
