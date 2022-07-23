@@ -1,6 +1,7 @@
 <?php
 include('koneksi.php');
 
+$id = $_POST['id'];
 $nama = $_POST['nama'];
 $satuan = $_POST['satuan'];
 $tgl_expired = $_POST['tgl_expired'];

@@ -75,8 +75,8 @@
             </a>
           </li>
         </ul>
-      </div>
-    </nav>
+  </div>
+  </nav>
   </header>
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
@@ -103,7 +103,7 @@
           <a href="stok-obat.php">
             <i class="fa fa-map-o"></i> <span>Stok obat</span>
           </a>
-          <li class="treeview">
+        <li class="treeview">
           <a href="data-obat.php">
             <i class="fa fa-map-o"></i> <span>Data obat</span>
           </a>
@@ -133,8 +133,8 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">
-               <TABLE>Tambahkan</TABLE>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">
+                <TABLE>Tambahkan</TABLE>
               </button>
               <a target="_blank" href="export-excel-stok-obat.php" class="btn btn-success mt-2 mb-3">Export Ke Excel</a>
             </div>
@@ -149,34 +149,30 @@
                 $no = 0;
                 ?>
                 <thead>
-                <tr>
-                  <th>No</th>
-                  <th>Nama Obat</th>
-                  <th>Sisa Stok</th>
-                  <th>Aksi</th>
-                </tr>
+                  <tr>
+                    <th>No</th>
+                    <th>Nama Obat</th>
+                    <th>Sisa Stok</th>
+                    <th>Aksi</th>
+                  </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <?php
-                    while($data = mysqli_fetch_array($query)) {
-                    $no++;
-                  ?>
-                  <td><?= $no ?></td>
-                  <td><?= $data['nama'] ?></td>
-                  <td><?= $data['stok'] ?></td>
-                  <td>
-                     <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit">
-                      Edit
-                    </button>
-                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-hapus">
-                      Hapus
-                    </button>
-                  </td>
-                </tr>
+                  <tr>
+                    <?php
+                    while ($data = mysqli_fetch_array($query)) {
+                      $no++;
+                    ?>
+                      <td><?= $no ?></td>
+                      <td><?= $data['nama'] ?></td>
+                      <td><?= $data['stok'] ?></td>
+                      <td>
+                        <a href="hapus-stok-obat.php?id=<?= $data['id'] ?>" class="btn btn-danger">
+                          Hapus</a>
+                      </td>
+                  </tr>
                 <?php
-                  }
-                  ?>
+                    }
+                ?>
                 </tbody>
               </table>
             </div>
@@ -185,20 +181,20 @@
           <!-- /.col -->
         </div>
         <!-- /.row -->
-      </section>
-      <!-- /.content -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 1.0.0
     </div>
-    <!-- /.content-wrapper -->
-    <footer class="main-footer">
-      <div class="pull-right hidden-xs">
-        <b>Version</b> 1.0.0
-      </div>
-      <strong>Copyright &copy; 2021 <a href="https://adminlte.io">Nurrajma Suryanti</a>.</strong>
-    </footer>
+    <strong>Copyright &copy; 2021 <a href="https://adminlte.io">Nurrajma Suryanti</a>.</strong>
+  </footer>
 
-    <!-- Add the sidebar's background. This div must be placed
+  <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
-    <div class="control-sidebar-bg"></div>
+  <div class="control-sidebar-bg"></div>
   </div>
   <!-- ./wrapper -->
 

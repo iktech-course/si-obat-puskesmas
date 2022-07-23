@@ -15,6 +15,6 @@ if($query)
 else
 {
 	echo "Data Gagal Hapus";
-	mysqli_error($query);
+	mysqli_error($koneksi);
 }
 ?>
