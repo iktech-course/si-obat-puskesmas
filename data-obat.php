@@ -151,9 +151,9 @@
                           <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-edit<?= $data['id'] ?>">
                             Edit
                           </button>
-                          <a href="hapus-data-obat.php?id=<?php echo $data['id'] ?>" class="btn btn-danger">
+                          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-delete<?= $data['id'] ?>">
                             Hapus
-                          </a>
+                          </button>
                         </td>
                     </tr>
                     <div class="modal fade" id="modal-edit<?php echo $data['id']; ?>">
@@ -198,6 +198,32 @@
                       </div>
                       <!-- /.modal-dialog -->
                     </div>
+
+                  <!-- Modal Hapus Data -->
+                  <div class="modal fade" id="modal-delete<?php echo $data['id'] ?>">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title">Hapus Data</h4>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <p>Apakah anda yakin ingin menghapus data ini?</p>
+                          <form action="hapus-obat-keluar.php" method="get">
+                            <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
+                        </div>
+                        <div class="modal-footer justify-content-between">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          <button type="submit" class="btn btn-danger">Hapus Data</button>
+                        </div>
+                      </div>
+                      </form>
+                    </div>
+
+                  </div>
+                  <!-- ./modal -->
                   <?php
                       }
                   ?>
