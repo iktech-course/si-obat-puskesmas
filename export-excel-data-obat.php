@@ -11,7 +11,7 @@
         header("Content-type: application/vnd-ms-excel");
         header("Content-Disposition: attachment; filename=data obat.xls");
     ?>
-
+    <p>Daftar Stok Obat</p>
     <table border="1">
         <thead>
             <tr>

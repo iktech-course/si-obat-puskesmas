@@ -12,6 +12,7 @@
         header("Content-Disposition: attachment; filename=stok obat.xls");
     ?>
 
+    <p>Daftar Stok Obat</p>
     <table border="1">
         <thead>
             <tr>
